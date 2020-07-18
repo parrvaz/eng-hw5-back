@@ -31,7 +31,7 @@ router.put("/addForm", function (req, res) {
 router.post("/:formId", function (req, res) {
   const formData = req.body;
   console.log(formData);
-  logger.log("info", `new formDate:\n\t\t ${formData}`);
+  logger.log("info", `new formDate:\n\t\t${JSON.stringify(formData)}`);
 
   res.status(200).send(formData);
 });
